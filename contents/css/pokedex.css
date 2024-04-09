@@ -1,0 +1,7 @@
+@import url('general/normalize.css');
+@import url('general/style.css');
+
+.lista_pokemon{
+    margin: 15px;
+    padding: 0;
+}

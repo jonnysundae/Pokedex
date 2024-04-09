@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/* Caixa Pokemon */
+
+.cantos_arredondados_pokedex{
+    border-radius: 20px;
+}
+
+.caixa_pokemon{
+    padding: 15px;
+    width: 200px;
+    background: #ff9741 80px 0px no-repeat url("../../img/pokemon_bg.png");
+    
+}
+
+.cabecalho_pokemon{
+    display: flex;
+    justify-content: space-between;
+    
+    color: #fafafa;
+}
+
+.info_pokemon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tipo_pokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.tipo_pokemon div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-color: #00000024;
+    height: 20px;
+    padding: 5px;
+    margin-top: 10px;
+
+    font-size: 15px;
+    color:#fafafa;
+
+    border-radius: 20px;
+}
+
+.tipo_pokemon div span{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.tipo_pokemon div img{
+    width: 20px;
+}
+
+.imagem_pokemon{
+    display: flex;
+    justify-content: flex-end;
+    width: 96px;
+    height: 96px;
+}
