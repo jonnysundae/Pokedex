@@ -1,7 +1,12 @@
 @import url('general/normalize.css');
 @import url('general/style.css');
 
-.lista_pokemon{
+#lista_pokedex ul{
     margin: 15px;
     padding: 0;
+}
+
+#lista_pokedex{
+    display: flex;
+    flex-wrap: wrap;
 }
