@@ -4,66 +4,45 @@
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-/* Caixa Pokemon */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+
+    width: 100vw; width: 100lvw;
+    height: 70px;
+}
+
+header .header_menu{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+}
+
+/* Base Principal */
+.base_principal{
+    width: 75vw; width: 75lvw;
+    background-color: #ffffffed;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .base_principal{
+        width: 100vw; width: 100lvw;
+    }
+}
 
 .cantos_arredondados_pokedex{
     border-radius: 20px;
-}
-
-.caixa_pokemon{
-    padding: 15px;
-    width: 200px;
-    background: 80px 0px no-repeat url("../../img/pokemon_bg.png");
-    
-}
-
-.cabecalho_pokemon{
-    display: flex;
-    justify-content: space-between;
-    
-    color: #fafafa;
-}
-
-.info_pokemon{
-    display: flex;
-    justify-content: space-between;
-}
-
-.tipo_pokemon{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
-.tipo_pokemon div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    background-color: #00000024;
-    height: 20px;
-    padding: 5px;
-    margin-top: 10px;
-
-    font-size: 15px;
-    color:#fafafa;
-
-    border-radius: 20px;
-}
-
-.tipo_pokemon div span{
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-.tipo_pokemon div img{
-    width: 20px;
-}
-
-.imagem_pokemon{
-    display: flex;
-    justify-content: flex-end;
-    width: 96px;
-    height: 96px;
 }

@@ -17,25 +17,22 @@ async function criarPokedex(limit,offset){
     gerarListaPokedexAPI(limit,offset).then(async (resposta)=>{
         for (const element of resposta.results) {
             await pegaDadosAPI(element.url).then((pokemon)=>{
-                console.log(pokemon);
-                console.log(`#${pokemon.id} Pokemon :${pokemon.name} | Tipo ${pokemon.types[0].type.name}`);
 
                 // Preparando o HTML do tipo do Pokemon
                 var tipoHTML = '';
                 pokemon.types.forEach((tipos)=>{
-                    console.log(tipos.type.name);
                     tipoHTML = tipoHTML +  `
                         <div>
                             <img src="contents/img/pokemonType/${tipos.type.name}.png" alt="">
                             <span>${(tipos.type.name).charAt(0).toUpperCase()+(tipos.type.name).slice(1)}</span>
                         </div>
                     `;
-                }
-                )
+                });
                 
                 //Criando o box do Pokemon
                 listaPokedex = document.getElementById('lista_pokedex');
-                novoPokemon = document.createElement('ul');
+                novoPokemon = document.createElement('div');
+                novoPokemon.setAttribute("id",pokemon.name)
                 novoPokemon.innerHTML =
                 `<div id="caixa_pokemon" class="cantos_arredondados_pokedex caixa_pokemon" style="background-color:${corBackgroundTipoPokemon(pokemon.types[0].type.name)}">
                     <div id="cabecalho_pokemon" class="cabecalho_pokemon">
@@ -84,4 +81,4 @@ function corBackgroundTipoPokemon(tipo){
     return cores[tipo] || '#939393';
 }
 
-criarPokedex(25,0);
+criarPokedex(20,0);
